@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleLogout = () => {
     logOut()
       .then(() => {
-        toast.success('SuccessFully Logged Out !')
+        toast.success("SuccessFully Logged Out !");
       })
       .catch((error) => {
         console.log(error.message);
@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/dashboard"
+          to="/dashboard/allTask"
           className={({ isActive }) =>
             isActive
               ? "text-[#6C63FF] font-semibold text-lg uppercase"
@@ -53,18 +53,6 @@ const Navbar = () => {
           Contact
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive
-              ? "text-[#6C63FF] font-semibold text-lg uppercase"
-              : " font-semibold text-lg uppercase"
-          }
-        >
-          About us
-        </NavLink>
-      </li>      
     </>
   );
 
@@ -98,7 +86,6 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="flex gap-2 items-center">
-           
             <div className="text-center">
               <p
                 style={{ letterSpacing: "5px" }}

@@ -6,6 +6,10 @@ import Register from "../Pages/Register/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import PrivetRoute from "./PrivetRouter";
+import Contact from "../Pages/Contact/Contact";
+import AllTask from "../Pages/AllTask/AllTask";
+import PostTask from "../Pages/PostTask/PostTask";
+import PreviousTask from "../Pages/PreviousTask/PreviousTask";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +29,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
     ],
   },
   {
@@ -36,7 +44,20 @@ const router = createBrowserRouter([
       </PrivetRoute>
     ),
 
-    children: [{}],
+    children: [
+      {
+        path: "allTask",
+        element: <AllTask />,
+      },
+      {
+        path: "post",
+       element: <PostTask />
+      },
+      {
+        path: "previous",
+       element: <PreviousTask />
+      },
+    ],
   },
 ]);
 

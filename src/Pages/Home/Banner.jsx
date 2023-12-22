@@ -16,7 +16,7 @@ const Banner = () => {
           completing tasks efficiently. It involves creating task lists, setting
           priorities, assigning responsibilities, and establishing deadlines.
         </p>
-        <Link to={user ? "/dashboard" : "/login"}>
+        <Link to={user ? "/dashboard/allTask" : "/login"}>
           <button className="btn btn-outline mt-5 lg:mt-10 rounded-none lg:text-xl font-medium ">
             Let’s Explore
           </button>
